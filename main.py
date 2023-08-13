@@ -37,18 +37,5 @@ async def ball(ctx, question):
     embed.set_footer(text="Use /help for help.")
     await ctx.send(embed=embed)
 
-# Events
-@client.event
-async def on_ready():
-    print(f"Logging in to discord.com as {client.user.name}")
-    embed = nextcord.Embed(title=f"{client.user.name} is online", description="", color=0x9966CB)
-    await client.get_channel(1140271893178495076).send(embed=embed)
-
-@client.event
-async def on_close():
-    print(f"Logging out of discord.com as {client.user.name}")
-    embed = nextcord.Embed(title=f"{client.user.name} is offline", description="", color=0x9966CB)
-    await client.get_channel(1140271893178495076).send(embed=embed)
-
 # Client Run
 client.run(TOKEN)
