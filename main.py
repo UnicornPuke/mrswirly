@@ -1,8 +1,6 @@
 # Imports
 import os
 from dotenv import load_dotenv
-import asyncio
-import sqlite3
 import nextcord
 import random
 
